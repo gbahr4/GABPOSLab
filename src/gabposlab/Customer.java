@@ -4,11 +4,17 @@ package gabposlab;
 /**
  *
  * @author Greg Bahr
+ * @version 2.0
  */
 public class Customer {
     
     private String name;
     private String customerID;
+
+    public Customer() {
+    }
+    
+    
 
     public Customer(String name, String customerID) {
         this.name = name;

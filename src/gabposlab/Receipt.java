@@ -4,22 +4,21 @@ package gabposlab;
 /**
  *
  * @author Greg Bahr
+ * @version 2.0
  */
 public class Receipt {
     
-          
+    private LineItem[] lineItems = new LineItem[0];
+
     public Receipt() {
     }
-    
-    LineItem[] lineItems = new LineItem[0];
-        
+
+                
     public void addLineItem(Product product, int qty) {
         LineItem item = new LineItem(product, qty);
         addToArray(item);
-               
     }
-    
-    
+        
     private void addToArray(LineItem item) {
         LineItem[] tempItems = new LineItem[lineItems.length + 1];
         System.arraycopy(lineItems, 0, tempItems, 0, lineItems.length);
@@ -35,7 +34,7 @@ public class Receipt {
          }
          return grandTotal;
      }
-   
-   
+
+       
     
 }

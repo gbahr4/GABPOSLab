@@ -4,10 +4,11 @@ package gabposlab;
 /**
  *
  * @author Greg Bahr
+ * @version 2.0
  */
 public class LineItem {
-    Product product;
-    int qty;
+    private Product product;
+    private int qty;
 
     public LineItem(Product product, int qty) {
         this.product = product;

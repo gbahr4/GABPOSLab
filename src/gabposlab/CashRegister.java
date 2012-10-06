@@ -4,10 +4,11 @@ package gabposlab;
 /**
  *
  * @author Greg Bahr
+ * @version 2.0
  */
 public class CashRegister {
     
-    Receipt receipt = new Receipt();
+    private Receipt receipt = new Receipt();
     
     Product[] products = {
         new Product("GB123", "Green Bay Packers Jersey", 49.99, 
@@ -26,7 +27,7 @@ public class CashRegister {
    
     
     
-    public void startNewSale(String customerID) {
+    public String startNewSale(String customerID) {
         Customer customer = null;
         for(Customer c : customers) {
             if(customerID.equals(c.getCustomerID())) {
@@ -36,9 +37,11 @@ public class CashRegister {
         }
             if(customer != null) {
                 customer.getCustomerID();
-                customer.getName();
-        }
+            }
+            return customerID;
     }
+    
+   
     
     public void addItemToSale(String prodID, int qty) {
         Product product = null;
@@ -54,8 +57,10 @@ public class CashRegister {
     }
     
      public void endSale() {
-         receipt.getTotalBeforeDiscount();
+                 
      }
+     
+     
 }
      
     

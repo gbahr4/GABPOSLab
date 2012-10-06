@@ -4,6 +4,7 @@ package gabposlab;
 /**
  *
  * @author Greg Bahr
+ * @version 2.0
  */
 public class Product {
     
@@ -13,9 +14,9 @@ public class Product {
     private DiscountStrategy discountStrategy;
     
 
-    public Product(String productNumber, String description, double price, 
+    public Product(String productID, String description, double price, 
             DiscountStrategy discountStrategy) {
-        this.productID = productNumber;
+        this.productID = productID;
         this.description = description;
         this.price = price;
         this.discountStrategy = discountStrategy;
@@ -25,8 +26,8 @@ public class Product {
         return productID;
     }
 
-    public void setProductNumber(String productNumber) {
-        this.productID = productNumber;
+    public void setProductNumber(String productID) {
+        this.productID = productID;
     }
 
     public String getDescription() {

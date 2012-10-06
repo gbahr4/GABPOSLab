@@ -4,6 +4,7 @@ package gabposlab;
 /**
  *
  * @author Greg Bahr
+ * @version 2.0
  */
 public interface DiscountStrategy {
     
